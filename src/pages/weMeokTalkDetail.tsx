@@ -1,7 +1,7 @@
 import React from "react";
 
 const weMeokTalkDetail = () => {
-  return <div>위먹톡 디테일</div>;
+  return <div>위목톡 디테일</div>;
 };
 
 export default weMeokTalkDetail;
