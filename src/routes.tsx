@@ -2,18 +2,23 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, COLORS } from "./styles";
-import mainPage from "./pages/mainPage";
-import aboutPage from "./pages/aboutPage";
-import alcoholDetail from "./pages/alcoholDetail";
-import featherDetail from "./pages/featherDetail";
-import kobbubakDetail from "./pages/kobbubakDetail";
-import metorDetail from "./pages/metorDetail";
-import storeDetail from "./pages/storeDetail";
-import storeList from "./pages/storeList";
-import themeList from "./pages/themeList";
-import todayRandom from "./pages/todayRandom";
-import weMeokTalkMain from "./pages/weMeokTalkMain";
-import weMeokTalkDetail from "./pages/weMeokTalkDetail";
+import { Footer } from "./components";
+import { Nav } from "./container";
+import {
+  AboutPage,
+  AlcoholDetail,
+  FeatherDetail,
+  KobbubakDetail,
+  MainPage,
+  MetorDetail,
+  PostDetail,
+  PostList,
+  PostWriting,
+  StoreDetail,
+  StoreList,
+  ThemeList,
+  TodayRandom
+} from "./pages";
 
 class Routes extends React.Component {
   render() {
@@ -22,24 +27,23 @@ class Routes extends React.Component {
         <ThemeProvider theme={COLORS}>
           <GlobalStyle />
           <Router>
+            <Nav />
             <Switch>
-              <Route exact path="/" component={mainPage} />
-              <Route exact path="/aboutPage" component={aboutPage} />
-              <Route exact path="/alcoholDetail" component={alcoholDetail} />
-              <Route exact path="/featherDetail" component={featherDetail} />
-              <Route exact path="/kobbubakDetail" component={kobbubakDetail} />
-              <Route exact path="/metorDetail" component={metorDetail} />
-              <Route exact path="/storeDetail" component={storeDetail} />
-              <Route exact path="/storeList" component={storeList} />
-              <Route exact path="/themeList" component={themeList} />
-              <Route exact path="/todayRandom" component={todayRandom} />
-              <Route exact path="/weMeokTalkMain" component={weMeokTalkMain} />
-              <Route
-                exact
-                path="/weMeokTalkDetail"
-                component={weMeokTalkDetail}
-              />
+              <Route exact path="/" component={MainPage} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/alcohol-detail" component={AlcoholDetail} />
+              <Route exact path="/feather-detail" component={FeatherDetail} />
+              <Route exact path="/kobbubak-detail" component={KobbubakDetail} />
+              <Route exact path="/metor-detail" component={MetorDetail} />
+              <Route exact path="/store-detail" component={StoreDetail} />
+              <Route exact path="/store-list" component={StoreList} />
+              <Route exact path="/theme-list" component={ThemeList} />
+              <Route exact path="/today-random" component={TodayRandom} />
+              <Route exact path="post-detail" component={PostDetail} />
+              <Route exact path="/post-list" component={PostList} />
+              <Route exact path="/post-writing" component={PostWriting} />
             </Switch>
+            <Footer />
           </Router>
         </ThemeProvider>
       </React.Fragment>
