@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Noto Sans KR', sans-serif, serif;
     font-family: 'Yeon Sung', cursive;
-
+\
   * {
     box-sizing: border-box;
   }
@@ -17,4 +17,5 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+\
 `;
