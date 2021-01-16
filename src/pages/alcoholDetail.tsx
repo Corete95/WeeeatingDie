@@ -1,7 +1,5 @@
 import React from "react";
 
-const alcoholDetail = () => {
+export default function AlcoholDetail() {
   return <div>술과함께 리스트</div>;
-};
-
-export default alcoholDetail;
+}
