@@ -1,7 +1,5 @@
 import React from "react";
 
-const signUpModal = () => {
+export default function SignUpModal() {
   return <div>회원가입 모달</div>;
-};
-
-export default signUpModal;
+}
